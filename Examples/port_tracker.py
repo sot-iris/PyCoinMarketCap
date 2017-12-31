@@ -13,6 +13,7 @@ total = 0
 
 for key, value in portfolio.items():
     #create each cryptocurrency object from which to gather their attributes
+    #this will return the cryptoasset prices in GBP
     coin = Crypto(key, currency)
     v = value*coin.price_gbp
     total += v
