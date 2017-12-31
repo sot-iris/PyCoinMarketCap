@@ -13,8 +13,6 @@ total = 0
 
 for key, value in portfolio.items():
     #create each cryptocurrency object from which to gather their attributes
-    #Crypto class: def __init__(self, id, price_in, sigfig=2)
-    # id of coin, fiat currency and (optional, default 2 if left empty) number of significant figures for returned price values.
     coin = Crypto(key, currency)
     v = value*coin.price_gbp
     total += v
