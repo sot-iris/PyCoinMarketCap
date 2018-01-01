@@ -14,21 +14,21 @@ The Crypto class takes 2 arguments: the first, *id*, accepts a string of the nam
 For example, the following code will instantiate a crypto class object for bitcoin, whose price will be given in GBP:
 We can then access its attributes.
 ```python
-bitcoin = Crypto("bitcoin", GBP)
+bitcoin = Crypto("bitcoin", "GBP")
 
-bitcoin.info
 #bitcoin.info returns the full json dictionary returned when the API request is made
+bitcoin.info
 
 #To print this info in a readable and nice way, simply declare:
-
 bitcoin.information()
 
+#The below returns the price of bitcoin either in the user-specified fiat currency or usd, respectively.
 bitcoin.price
 bitcoin.price_usd
-#The above returns the price of bitcoin either in the user-specified fiat currency or usd, respectively.
 
+#Finally, this attribute returns the current market capitalisation of the given cryptocurrency, in this case, bitcoin.
 bitcoin.market_cap_usd
-#The above returns the current market capitalisation of the given cryptocurrency.
+
 ```
 
 I will be updating the examples folder with use cases of this Python API wrapper alongside the portolio tracker (annotation for which are hashed within the code).
