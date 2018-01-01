@@ -19,19 +19,17 @@ bitcoin = Crypto("bitcoin", GBP)
 bitcoin.info
 #bitcoin.info returns the full json dictionary returned when the API request is made
 
-#To print this info in a readable, nice way, use this for-loop:
+#To print this info in a readable and nice way, simply declare:
 
-for key, value in bitcoin.info.items():
-    print("%s: %s" % (key, value))
+bitcoin.information()
 
 bitcoin.price
 bitcoin.price_usd
-#The above returns the price of bitcoin in either in the user-specified fiat currency or usd, respectively.
-bitcoin.market_cap_usd
+#The above returns the price of bitcoin either in the user-specified fiat currency or usd, respectively.
 
+bitcoin.market_cap_usd
 #The above returns the current market capitalisation of the given cryptocurrency.
 ```
-
 
 I will be updating the examples folder with use cases of this Python API wrapper alongside the portolio tracker (annotation for which are hashed within the code).
 
