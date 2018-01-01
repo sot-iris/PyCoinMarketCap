@@ -10,3 +10,6 @@ class Crypto:
         self.price = float(self.info["price_%s" % (price_in.lower())])
         self.market_cap_usd = float(self.info["market_cap_usd"])
 
+    def information(self):
+        for key, value in self.info.items():
+            print("%s: %s" % (key, value))
