@@ -12,10 +12,10 @@ total = 0
 
 #this for-loop iterates through the keys and values in the portfolio dictionary
 
-for key, value in portfolio.items():
+for coin, holdings in portfolio.items():
     #create each cryptocurrency object from which to gather their attributes
     #this will return the cryptoasset prices in GBP
-    coin = Crypto(key, currency)
+    coin = Crypto(coin, holdings)
     v = value*coin.price
     total += v
     print("%s: %s %s" % (key.title(), v, currency))
