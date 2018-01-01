@@ -18,6 +18,6 @@ for coin, holdings in portfolio.items():
     coin = Crypto(coin, holdings)
     v = value*coin.price
     total += v
-    print("%s: %s %s" % (key.title(), v, currency))
+    print("%s: %s %s" % (coin.title(), v, currency))
 
 print("Your total holdings: %s in %s" % (total, currency))
