@@ -1,5 +1,6 @@
 # PyCoinMarketCap
 A lightweight object-oriented style python wrapper to access http://coinmarketcap.com API
+
 For an alternative, see: https://pypi.python.org/pypi/coinmarketcap/
 
 # Usage
@@ -18,6 +19,11 @@ bitcoin = Crypto("bitcoin", GBP)
 bitcoin.info
 #bitcoin.info returns the full json dictionary returned when the API request is made
 
+#To print this info in a readable, nice way, use this for-loop:
+
+for key, value in bitcoin.info.items():
+    print("%s: %s" % (key, value))
+
 bitcoin.price_gbp
 bitcoin.price_usd
 #The above returns the price of bitcoin in either gbp or usd, respectively.
@@ -25,6 +31,7 @@ bitcoin.market_cap_usd
 
 #The above returns the current market capitalisation of the given cryptocurrency.
 ```
+
 
 I will be updating the examples folder with use cases of this Python API wrapper alongside the portolio tracker (annotation for which are hashed within the code).
 
