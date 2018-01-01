@@ -24,9 +24,9 @@ bitcoin.info
 for key, value in bitcoin.info.items():
     print("%s: %s" % (key, value))
 
-bitcoin.price_gbp
+bitcoin.price
 bitcoin.price_usd
-#The above returns the price of bitcoin in either gbp or usd, respectively.
+#The above returns the price of bitcoin in either in the user-specified fiat currency or usd, respectively.
 bitcoin.market_cap_usd
 
 #The above returns the current market capitalisation of the given cryptocurrency.
