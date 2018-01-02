@@ -5,7 +5,7 @@ from cryptomarketcap import Crypto
 #Portfolio tracker
 #Declare cryptoassets in this dictionary along with the number owned
 
-portfolio={"bitcoin": 100, "ethereum": 2000, "litecoin": 80, "iota": 1900, "ripple": 20000, "cardano": 20000}
+portfolio={"bitcoin": 1, "ethereum": 2, "litecoin": 1, "iota": 20, "ripple": 40, "cardano": 20}
 currency = "GBP"
 
 total = 0
@@ -15,8 +15,8 @@ total = 0
 for coin, holdings in portfolio.items():
     #create each cryptocurrency object from which to gather their attributes
     #this will return the cryptoasset prices in GBP
-    coin = Crypto(coin, holdings)
-    v = value*coin.price
+    coinObj = Crypto(coin, currency)
+    v = holdings*coinObj.price
     total += v
     print("%s: %s %s" % (coin.title(), v, currency))
 
